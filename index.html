@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>P N KISHAN | Video Editor</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <title>P N KISHAN | Video Editor & Content Creator</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --bg-dark: #07070a;
+            --bg-card: #111118;
+            --bg-card-hover: #181824;
+            --accent-pink: #ff4d8d;
+            --accent-purple: #7928ca;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --border-light: rgba(255, 255, 255, 0.08);
+            --gradient-primary: linear-gradient(135deg, #ff4d8d 0%, #7928ca 100%);
+        }
 
         * {
             margin: 0;
@@ -18,634 +28,673 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: #0b0b0f;
-            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* ================= NAVIGATION ================= */
-
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 7%;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            background: rgba(11, 11, 15, 0.85);
-            backdrop-filter: blur(12px);
-
+            background: rgba(7, 7, 10, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid var(--border-light);
         }
 
         nav .logo {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
         nav .logo span {
-            color: #ff4d8d;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        nav a {
+        .nav-links a {
             text-decoration: none;
-            color: #d5d5d5;
+            color: var(--text-muted);
             font-size: 0.9rem;
             font-weight: 500;
-            margin-left: 30px;
-            transition: 0.3s;
+            margin-left: 32px;
+            transition: all 0.3s ease;
         }
 
-        nav a:hover {
-            color: #ff4d8d;
+        .nav-links a:hover {
+            color: var(--text-main);
         }
 
+        .nav-cta {
+            background: var(--gradient-primary);
+            padding: 8px 18px;
+            border-radius: 20px;
+            color: #fff !important;
+            font-weight: 600 !important;
+        }
 
         /* ================= HERO ================= */
-
         header {
             min-height: 100vh;
-
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-
             position: relative;
-
-            background:
-                linear-gradient(
-                    rgba(11,11,15,0.72),
-                    rgba(11,11,15,0.92)
-                ),
-                url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');
-
-            background-size: cover;
-            background-position: center;
+            padding: 120px 20px 60px;
+            background: 
+                radial-gradient(circle at 50% 30%, rgba(255, 77, 141, 0.15), transparent 60%),
+                radial-gradient(circle at 80% 80%, rgba(121, 40, 202, 0.12), transparent 50%);
         }
 
         .hero-content {
-            max-width: 900px;
-            padding: 30px;
+            max-width: 850px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(255, 77, 141, 0.1);
+            border: 1px solid rgba(255, 77, 141, 0.3);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--accent-pink);
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
-
+            width: 150px;
+            height: 150px;
             object-fit: cover;
-
             border-radius: 50%;
-
-            border: 4px solid #ff4d8d;
-
-            box-shadow:
-                0 0 30px rgba(255,77,141,0.35);
-
+            padding: 4px;
+            background: var(--gradient-primary);
+            box-shadow: 0 0 35px rgba(255, 77, 141, 0.3);
             margin-bottom: 25px;
         }
 
         header h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
             font-weight: 800;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
         }
 
         header h1 span {
-            color: #ff4d8d;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         header p {
-            font-size: 1.25rem;
-            color: #c8c8c8;
-            margin-bottom: 30px;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-btn {
-            display: inline-block;
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-            padding: 14px 30px;
-
+        .btn {
+            padding: 14px 32px;
             border-radius: 30px;
-
-            background: #ff4d8d;
-            color: white;
-
-            text-decoration: none;
-
             font-weight: 600;
-
-            transition: 0.3s;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .hero-btn:hover {
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(255, 77, 141, 0.25);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,77,141,0.3);
+            box-shadow: 0 15px 30px rgba(255, 77, 141, 0.4);
         }
 
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border-light);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
 
         /* ================= COMMON SECTION ================= */
-
         section {
             padding: 100px 8%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             text-align: center;
+            margin-bottom: 60px;
         }
 
-        section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+        .section-header h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
-        section h2 span {
-            color: #ff4d8d;
+        .section-header h2 span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .section-line {
-            width: 60px;
+            width: 50px;
             height: 4px;
-
-            background: #ff4d8d;
-
-            margin: 0 auto 40px;
-
+            background: var(--gradient-primary);
+            margin: 15px auto 0;
             border-radius: 10px;
         }
 
-
         /* ================= ABOUT ================= */
-
-        #about {
-            background: #101016;
-        }
-
-        #about p {
-            max-width: 800px;
-            margin: 0 auto 20px;
-
-            color: #b8b8b8;
-
-            font-size: 1.05rem;
-            line-height: 1.9;
-        }
-
-
-        /* ================= SKILLS ================= */
-
-        .work-experience {
-            background: #0b0b0f;
-        }
-
-        .skills-container {
+        .about-grid {
             display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
 
-            grid-template-columns:
-                repeat(auto-fit, minmax(250px, 1fr));
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 40px;
+        }
 
+        .about-card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* ================= SKILLS & TOOLS ================= */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-
-            max-width: 1000px;
-
-            margin: auto;
         }
 
-        .work-item {
-            background: #15151d;
-
-            padding: 35px 25px;
-
-            border-radius: 15px;
-
-            border: 1px solid rgba(255,255,255,0.07);
-
-            transition: 0.3s;
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 35px 30px;
+            transition: all 0.3s ease;
         }
 
-        .work-item:hover {
+        .skill-card:hover {
             transform: translateY(-8px);
-
-            border-color: #ff4d8d;
-
-            box-shadow:
-                0 15px 40px rgba(0,0,0,0.4);
+            border-color: rgba(255, 77, 141, 0.4);
+            background: var(--bg-card-hover);
         }
 
-        .work-icon {
-            font-size: 2.5rem;
+        .skill-icon {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .skill-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .skill-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Software Tags */
+        .tools-wrapper {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .tools-wrapper h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tool-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-light);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* ================= PORTFOLIO / WORK ================= */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 77, 141, 0.3);
+        }
+
+        .portfolio-thumb {
+            width: 100%;
+            height: 200px;
+            background: #1d1d28;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .portfolio-info {
+            padding: 20px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ================= CONTACT ================= */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 24px;
+            padding: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             margin-bottom: 20px;
         }
 
-        .work-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 77, 141, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent-pink);
         }
 
-        .work-item p {
-            color: #aaa;
-            line-height: 1.7;
-        }
-
-
-        /* ================= SERVICES ================= */
-
-        #services {
-            background: #101016;
-        }
-
-        .services {
-            display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(250px, 1fr));
-
-            gap: 25px;
-
-            max-width: 1100px;
-
-            margin: 50px auto 0;
-        }
-
-        .services div {
-            padding: 40px 25px;
-
-            background: #15151d;
-
-            border-radius: 18px;
-
-            border: 1px solid rgba(255,255,255,0.07);
-
+        .info-text a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
             transition: 0.3s;
         }
 
-        .services div:hover {
-            transform: translateY(-10px);
-
-            background: #191923;
-
-            border-color: #ff4d8d;
+        .info-text a:hover {
+            color: var(--accent-pink);
         }
 
-        .services h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        .services p {
-            color: #aaa;
-            line-height: 1.7;
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: 0.3s;
         }
 
-
-        /* ================= CONTACT ================= */
-
-        .contact {
-            background:
-                linear-gradient(
-                    135deg,
-                    #15151d,
-                    #0b0b0f
-                );
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent-pink);
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        .contact p {
-            color: #b8b8b8;
-            font-size: 1.05rem;
-            margin: 15px auto;
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
         }
-
-        .contact-info {
-            margin-top: 30px;
-        }
-
-        .contact-info a {
-            color: #ff4d8d;
-            text-decoration: none;
-        }
-
 
         /* ================= FOOTER ================= */
-
         footer {
-            background: #07070a;
-
-            padding: 30px;
-
+            background: #040406;
+            padding: 40px 8%;
             text-align: center;
-
-            color: #777;
-
-            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-light);
         }
 
         footer a {
-            color: #aaa;
-
+            color: var(--text-muted);
             text-decoration: none;
-
-            margin: 0 10px;
-
+            margin: 0 12px;
             transition: 0.3s;
         }
 
         footer a:hover {
-            color: #ff4d8d;
+            color: var(--accent-pink);
         }
 
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 768px) {
-
-            nav {
-                padding: 15px 5%;
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 900px) {
+            .about-grid, .contact-container {
+                grid-template-columns: 1fr;
             }
-
-            nav .logo {
-                font-size: 1rem;
-            }
-
-            nav a {
-                margin-left: 10px;
-                font-size: 0.75rem;
-            }
-
-            header h1 {
-                font-size: 3.2rem;
-            }
-
-            header p {
-                font-size: 1rem;
+            
+            nav .nav-links {
+                display: none; /* Can be expanded to mobile menu */
             }
 
             section {
-                padding: 80px 6%;
+                padding: 70px 6%;
             }
 
-            section h2 {
-                font-size: 2.2rem;
+            .contact-container {
+                padding: 30px;
             }
-
         }
-
     </style>
 </head>
-
-
 <body>
 
-
 <!-- ================= NAVIGATION ================= -->
-
 <nav>
-
     <div class="logo">
         KISHAN<span>.</span>
     </div>
-
-    <div>
+    <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#work-experience">Skills</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Work</a>
         <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
     </div>
-
 </nav>
 
-
-
 <!-- ================= HERO ================= -->
-
 <header>
-
     <div class="hero-content">
-
-        <img
-            src="IMG_0514.JPG.jpeg"
-            alt="P N KISHAN"
-            class="profile-img"
-        >
-
-        <h1>
-            P N <span>KISHAN</span>
-        </h1>
-
-        <p>
-            Video Editor • BCA Student • Creative Visual Storyteller
-        </p>
-
-        <a href="#contact" class="hero-btn">
-            Let's Work Together
-        </a>
-
+        <span class="badge">AVAILABLE FOR FREELANCE & PROJECTS</span>
+        <br>
+        <img src="IMG_0514.JPG.jpeg" alt="P N Kishan" class="profile-img">
+        
+        <h1>P N <span>KISHAN</span></h1>
+        <p>Video Editor & BCA Student transforming raw footage into high-impact visual stories, cinematic edits, and viral short-form media.</p>
+        
+        <div class="hero-btns">
+            <a href="#portfolio" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
     </div>
-
 </header>
 
-
-
 <!-- ================= ABOUT ================= -->
-
 <section id="about">
-
-    <h2>About <span>Me</span></h2>
-
-    <div class="section-line"></div>
-
-    <p>
-        I'm P N KISHAN, a BCA student and passionate video editor
-        interested in creating engaging and visually appealing content.
-    </p>
-
-    <p>
-        I enjoy transforming ideas into creative videos using
-        transitions, effects, music, text animations and storytelling.
-        I am continuously learning new techniques and improving my
-        editing skills.
-    </p>
-
-</section>
-
-
-
-<!-- ================= SKILLS ================= -->
-
-<section id="work-experience" class="work-experience">
-
-    <h2>My <span>Skills</span></h2>
-
-    <div class="section-line"></div>
-
-
-    <div class="skills-container">
-
-        <div class="work-item">
-
-            <div class="work-icon">🎬</div>
-
-            <h3>Video Editing</h3>
-
-            <p>
-                Creating engaging videos with smooth transitions,
-                effects, music, subtitles and creative storytelling.
-            </p>
-
-        </div>
-
-
-        <div class="work-item">
-
-            <div class="work-icon">🎨</div>
-
-            <h3>Creative Content</h3>
-
-            <p>
-                Designing visually appealing content for social media,
-                personal projects and digital platforms.
-            </p>
-
-        </div>
-
-
-        <div class="work-item">
-
-            <div class="work-icon">💻</div>
-
-            <h3>BCA Student</h3>
-
-            <p>
-                Developing knowledge in computer applications,
-                technology and digital tools through my BCA studies.
-            </p>
-
-        </div>
-
+    <div class="section-header">
+        <h2>About <span>Me</span></h2>
+        <div class="section-line"></div>
     </div>
 
+    <div class="about-grid">
+        <div class="about-card">
+            <p>I am a passionate Video Editor and Bachelor of Computer Applications (BCA) student focused on blending technical expertise with creative visual storytelling.</p>
+            <p>With a deep understanding of pacing, motion design, sound editing, and color grading, I help brands and content creators elevate their narrative through engaging visual edits.</p>
+        </div>
+        <div class="about-stats">
+            <div class="stat-box">
+                <h3>BCA</h3>
+                <p>Computer Applications Student</p>
+            </div>
+            <div class="stat-box">
+                <h3>100%</h3>
+                <p>Creative Dedication</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services">
-
-    <h2>My <span>Services</span></h2>
-
-    <div class="section-line"></div>
-
-
-    <div class="services">
-
-        <div>
-
-            <div class="work-icon">🎥</div>
-
-            <h3>Video Editing</h3>
-
-            <p>
-                Creative video editing with transitions, effects,
-                music, subtitles and engaging visual elements.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <div class="work-icon">📱</div>
-
-            <h3>Social Media Videos</h3>
-
-            <p>
-                Short-form and engaging videos suitable for
-                Instagram, YouTube and other social platforms.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <div class="work-icon">✨</div>
-
-            <h3>Creative Content</h3>
-
-            <p>
-                Turning ideas into attractive digital content
-                through creative editing and storytelling.
-            </p>
-
-        </div>
-
+<!-- ================= SKILLS & TOOLS ================= -->
+<section id="skills">
+    <div class="section-header">
+        <h2>My <span>Expertise</span></h2>
+        <div class="section-line"></div>
     </div>
 
+    <div class="skills-grid">
+        <div class="skill-card">
+            <span class="skill-icon">🎬</span>
+            <h3>Post-Production & Editing</h3>
+            <p>Seamless cutting, dynamic transitions, pacing adjustment, and structuring narratives to maintain viewer retention.</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-icon">📱</span>
+            <h3>Short-Form Content</h3>
+            <p>Engaging Instagram Reels, YouTube Shorts, and TikTok style editing with dynamic captions, sound design, and hooks.</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-icon">✨</span>
+            <h3>Visual Effects & Titles</h3>
+            <p>Custom lower thirds, kinetic typography, motion graphics elements, and green-screen background removal.</p>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-icon">💻</span>
+            <h3>Tech Integration</h3>
+            <p>Leveraging computer application principles (BCA background) to streamline workflows, asset management, and digital optimization.</p>
+        </div>
+    </div>
+
+    <div class="tools-wrapper">
+        <h4>Software & Tools</h4>
+        <div class="tool-tags">
+            <span class="tag">Adobe Premiere Pro</span>
+            <span class="tag">After Effects</span>
+            <span class="tag">CapCut Pro</span>
+            <span class="tag">DaVinci Resolve</span>
+            <span class="tag">Audition</span>
+        </div>
+    </div>
 </section>
 
+<!-- ================= PORTFOLIO SHOWCASE ================= -->
+<section id="portfolio">
+    <div class="section-header">
+        <h2>Featured <span>Work</span></h2>
+        <div class="section-line"></div>
+    </div>
 
+    <div class="portfolio-grid">
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">▶</div>
+            <div class="portfolio-info">
+                <h3>Short-Form Viral Edit</h3>
+                <p>Dynamic cuts, custom kinetic text overlay, and immersive audio design.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">▶</div>
+            <div class="portfolio-info">
+                <h3>YouTube Vlogs & Promo</h3>
+                <p>Pacing, color correction, background score mixing, and narrative flow.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">▶</div>
+            <div class="portfolio-info">
+                <h3>Social Media Campaigns</h3>
+                <p>Sleek visual aesthetics designed for high engagement across digital channels.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ================= CONTACT ================= -->
+<section id="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Let's Create <span>Together</span></h3>
+            <p>Have a project in mind or need a reliable editor for your content channel? Reach out and let's discuss details.</p>
 
-<section id="contact" class="contact">
+            <div class="info-item">
+                <div class="info-icon">📞</div>
+                <div class="info-text">
+                    <span style="display:block; font-size:0.8rem; color:var(--text-muted);">PHONE</span>
+                    <a href="tel:8310916290">+91 8310916290</a>
+                </div>
+            </div>
 
-    <h2>Let's <span>Connect</span></h2>
+            <div class="info-item">
+                <div class="info-icon">✉️</div>
+                <div class="info-text">
+                    <span style="display:block; font-size:0.8rem; color:var(--text-muted);">EMAIL</span>
+                    <a href="mailto:lilkishu23@gmail.com">lilkishu23@gmail.com</a>
+                </div>
+            </div>
+        </div>
 
-    <div class="section-line"></div>
-
-    <p>
-        Have a project or creative idea?
-        Let's create something amazing together.
-    </p>
-
-
-    <div class="contact-info">
-
-        <p>
-            📞
-            <strong>Phone:</strong>
-            <a href="tel:8310916290">
-                8310916290
-            </a>
-        </p>
-
-        <p>
-            ✉️
-            <strong>Email:</strong>
-            <a href="mailto:lilkishu23@gmail.com">
-                lilkishu23@gmail.com
-            </a>
-        </p>
-
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer;">Send Message</button>
+        </form>
     </div>
-
 </section>
 
-
-
 <!-- ================= FOOTER ================= -->
-
 <footer>
-
-    <p>
-        © 2026 P N KISHAN | All Rights Reserved
-    </p>
-
-    <br>
-
-    <a href="#about">About</a>
-
-    <a href="#services">Services</a>
-
-    <a href="#contact">Contact</a>
-
+    <p>© 2026 P N KISHAN. All Rights Reserved.</p>
+    <div style="margin-top: 15px;">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Work</a>
+        <a href="#contact">Contact</a>
+    </div>
 </footer>
-
 
 </body>
 </html>
