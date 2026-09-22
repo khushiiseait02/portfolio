@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishan P N Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHdlYnNpdGV8ZW58MHx8fHwxNjYxNTUyNDE3&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: yellow;
+        }
+        header h1 {
+            font-size: 6em;
+            font-weight: 700;
+            margin: 0;
+        }
+        header p {
+            font-size: 2.1em;
+            font-weight: 300;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 50px;
+            align-items: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            margin: 0 15px;
+        }
+        section {
+           background-colour:#f0f8ff;
+            height: 100vh;
+            padding: 100px 50px;
+            text-align: center;
+        }
+        section h2 {
+            background##-colour:#e6ffe6;
+            color: green;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        section p {
+            background-colour:#fff5e6;
+            font-size: 1.2em;
+            color: black;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .services {
+            background-colour:#fff0f6;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .services div {
+            flex-basis: 30%;
+            padding: 20px;
+            background: orange;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .services div:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: green;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            margin-top: 50px;
+        }
+        .work-experience {
+            background-color: #f0f0f0;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .work-experience h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        .work-item {
+            margin: 0 auto 40px;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .work-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .work-item span {
+            color: #777;
+            font-size: 0.9em;
+        }
+        .work-item p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div>
+        <a href="#">Aahil Zishan</a>
+    </div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header>
+    <div>
+        <img src="https://ibb.co/RhpLjp3.jpg" alt="Aahil Zishan" style="width: 150px; border-radius: 75px; margin-bottom: 20px;">
+        <h1>AAHIL ZISHAN</h1>
+        <p>Designs galore for you only</p>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I'm Aahil Zishan, a web developer and designer dedicated to creating visually stunning websites that combine aesthetics with functionality. My goal is to help businesses and individuals build their online presence with style and sophistication.</p>
+</section>
+
+<!-- Work Experience Section -->
+<section id="work-experience" class="work-experience">
+    <h2>Work Experience</h2>
+
+    <!-- Job 1 -->
+    <div class="work-item">
+        <h3>Software Engineer at Sony Tech Solutions</h3>
+        <span>June 2022 - Present</span>
+        <p>Developing and maintaining web applications, collaborating with cross-functional teams, and optimizing backend performance. Led a team of 5 to increase platform efficiency by 25%.</p>
+    </div>
+
+    <!-- Job 2 -->
+    <div class="work-item">
+        <h3>Intern - Web Development at Suzuki Web Services</h3>
+        <span>Jan 2021 - May 2022</span>
+        <p>Assisted in front-end development, fixed bugs, and improved website responsiveness by 30%. Learned key skills in teamwork and modern web technologies.</p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>My Services</h2>
+    <div class="services">
+        <div>
+            <h3>Web Development</h3>
+            <p>Modern, responsive, and optimized websites built using the latest technologies like HTML5, CSS3, and JavaScript.</p>
+        </div>
+        <div>
+            <h3>UI/UX Design</h3>
+            <p>Beautiful and intuitive interfaces that provide a seamless user experience, ensuring your site is easy to navigate.</p>
+        </div>
+        <div>
+            <h3>Brand Strategy</h3>
+            <p>Developing a unique brand identity that resonates with your audience and enhances your online presence.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to discuss a project or just want to say hello, feel free to reach out to me.</p>
+    <p>Phone: 9946623341</p>
+    <p>Email: contact@aahilzishan.com</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>©️ 2024 Aahil Zishan | All Rights Reserved</p>
+    <a href="#about">About</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a>
+</footer>
+
+</body>
+</html>
